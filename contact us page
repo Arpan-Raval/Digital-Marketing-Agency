@@ -121,7 +121,7 @@
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevents the form from submitting in the traditional way
-            window.location.href = 'asspage3.html'; // Replace with your desired URL
+            window.location.href = 'service.html'; // Replace with your desired URL
         });
     </script>
 </body>
