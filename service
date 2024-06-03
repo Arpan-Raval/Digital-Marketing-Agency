@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Section</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+        }
+
+        .services-container {
+            padding: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .services-header {
+            margin-bottom: 50px;
+        }
+
+        .section-subtitle {
+            color: #ff0000;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .section-description {
+            font-size: 16px;
+            color: #666666;
+            line-height: 1.5;
+        }
+
+        .services-content {
+            display: flex;
+            width: calc(300px * 8 + 30px * 7); /* Total width of all service items plus margin */
+            animation: slide 16s linear infinite;
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-300px * 4 - 30px * 3)); }
+        }
+
+        .service-item {
+            flex: 1 0 300px;
+            min-width: 250px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            margin-right: 30px;
+        }
+
+        .service-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .highlighted-service {
+            background-color: #ff4b4b;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 20px;
+        }
+
+        .service-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .service-description {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .service-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #ffffff;
+            color: #ff4b4b;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .service-button:hover {
+            background-color: #f0f0f0;
+        }
+
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .indicator {
+            width: 10px;
+            height: 10px;
+            background-color: #ff4b4b;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .indicator.active {
+            background-color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="services-container">
+        <div class="services-header">
+            <h3 class="section-subtitle">WHAT WE DO</h3>
+            <h2 class="section-title">SERVICES PROVIDE FOR YOU</h2>
+            <p class="section-description">Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque vitae ante at elit fringilla ac at purus. Morbi sed lacus nec risus finibus feugiat et fermentum.</p>
+        </div>
+        <div class="services-content">
+            <div class="service-item">
+                <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGVsaWNpb3VzJTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D" alt="Service 1" class="service-image">
+            </div>
+            <div class="service-item">
+                <img src="https://www.foodiesfeed.com/wp-content/uploads/2023/06/pouring-honey-on-pancakes.jpg" alt="Service 2" class="service-image">
+            </div>
+            <div class="service-item highlighted-service">
+                <div class="service-content">
+                    <img src="https://cdn-icons-png.flaticon.com/512/84/84366.png" alt="Web Development Icon" class="service-icon">
+                    <h3 class="service-title">WEB DEVELOPMENT</h3>
+                    <p class="service-description">Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque vitae ante at elit fringilla ac at purus. Morbi sed lacus nec risus finibus feugiat et fermentum.</p>
+                    <a href="asspage4.html" class="service-button">READ MORE</a>
+                </div>
+            </div>
+            <div class="service-item">
+                <img src="https://hips.hearstapps.com/hmg-prod/images/buddha-bowl-with-avocado-egg-chickpeas-tomato-royalty-free-image-1704305837.jpg?crop=0.668xw:1.00xh;0.159xw,0&resize=640:*" alt="Service 4" class="service-image">
+            </div>
+            
+            <div class="service-item">
+                <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGVsaWNpb3VzJTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D" alt="Service 1" class="service-image">
+            </div>
+            <div class="service-item">
+                <img src="https://www.foodiesfeed.com/wp-content/uploads/2023/06/pouring-honey-on-pancakes.jpg" alt="Service 2" class="service-image">
+            </div>
+            <div class="service-item highlighted-service">
+                <div class="service-content">
+                    <img src="https://cdn-icons-png.flaticon.com/512/84/84366.png" alt="Web Development Icon" class="service-icon">
+                    <h3 class="service-title">WEB DEVELOPMENT</h3>
+                    <p class="service-description">Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque vitae ante at elit fringilla ac at purus. Morbi sed lacus nec risus finibus feugiat et fermentum.</p>
+                    <a href="#" class="service-button">READ MORE</a>
+                </div>
+            </div>
+            <div class="service-item">
+                <img src="https://hips.hearstapps.com/hmg-prod/images/buddha-bowl-with-avocado-egg-chickpeas-tomato-royalty-free-image-1704305837.jpg?crop=0.668xw:1.00xh;0.159xw,0&resize=640:*" alt="Service 4" class="service-image">
+            </div>
+        </div>
+        <div class="carousel-indicators">
+            <span class="indicator active" onclick="moveSlide(0)"></span>
+            <span class="indicator" onclick="moveSlide(1)"></span>
+            <span class="indicator" onclick="moveSlide(2)"></span>
+            <span class="indicator" onclick="moveSlide(3)"></span>
+        </div>
+    </div>
+</body>
+</html>
