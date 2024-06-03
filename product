@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>our project</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header .project-title {
+            color: #ff4b4b;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .header .main-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .image-container {
+            flex: 2;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 365px;
+            object-fit: cover; 
+            border-radius: 8px;
+        }
+
+        .content-container {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .content-item {
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .content-item.active {
+            background-color: #ff4b4b;
+            color: #ffffff;
+        }
+
+        .content-item:hover {
+            background-color: #e0e0e0;
+        }
+
+        .content-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .content-description {
+            font-size: 14px;
+            color: #666666;
+        }
+        
+        .second-code-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .second-code-header {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .second-code-card {
+            display: inline-block;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 20px;
+            width: 150px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .second-code-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .second-code-icon {
+            font-size: 40px;
+            color: red;
+        }
+
+        .second-code-number {
+            font-size: 30px;
+            margin: 10px 0;
+        }
+
+        .second-code-description {
+            font-size: 16px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="project-title">OUR PROJECT</div>
+        <div class="main-title">WHY WE ARE BEST</div>
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="https://m.media-amazon.com/images/I/91zEX+iHmkL.jpg" alt="Default Image" id="mainImage">
+        </div>
+        <div class="content-container">
+            <div class="content-item" onclick="changeImage('https://m.media-amazon.com/images/I/91zEX+iHmkL.jpg', this)">
+                <div class="content-title">Adidas ice dive shower gel</div>
+                <div class="content-description">The Adidas ice dive shower gel is a 3-in-1 product designed for use on the face, body, and hair..</div>
+            </div>
+            <div class="content-item" onclick="changeImage('https://www.nestle.com/sites/default/files/styles/half_half_color_block_image_746_434/public/2024-01/kk-income-accelerator-half-original.jpg?h=c71d0c67&itok=Oy2gBbeH', this)">
+                <div class="content-title">KitKat</div>
+                <div class="content-description">This delectable snack consisted of layers of wafer cake, covered in creamy milk chocolate.</div>
+            </div>
+            <div class="content-item" onclick="changeImage('https://www.shutterstock.com/image-photo/cup-tea-glass-hot-brew-260nw-2369395563.jpg', this)">
+                <div class="content-title">Tea</div>
+                <div class="content-description">Tea is a fragrant beverage made from the dried or fresh leaves of the evergreen shrub Camellia sinensis, which is indigenous to China, India, and other East Asian nations. </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function changeImage(imageSrc, element) {
+            document.getElementById('mainImage').src = imageSrc;
+            const items = document.querySelectorAll('.content-item');
+            items.forEach(item => item.classList.remove('active'));
+            element.classList.add('active');
+        }
+    </script>
+    <div class="second-code-container">
+        <h2 class="second-code-header">OUR COMPANY GROWTH</h2>
+        <div class="second-code-card">
+            <div class="second-code-icon">&#10084;</div>
+            <div class="second-code-number">199+</div>
+            <div class="second-code-description">Satisfied Customers</div>
+        </div>
+        <div class="second-code-card">
+            <div class="second-code-icon">&#128337;</div>
+            <div class="second-code-number">1591+</div>
+            <div class="second-code-description">Days Of Operation</div>
+        </div>
+        <div class="second-code-card">
+            <div class="second-code-icon">&#10004;</div>
+            <div class="second-code-number">283+</div>
+            <div class="second-code-description">Completed Projects</div>
+        </div>
+        <div class="second-code-card">
+            <div class="second-code-icon">&#127942;</div>
+            <div class="second-code-number">75+</div>
+            <div class="second-code-description">Awards Won</div>
+        </div>
+    </div>
+</body
