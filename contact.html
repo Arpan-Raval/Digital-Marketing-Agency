@@ -120,8 +120,22 @@
 
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevents the form from submitting in the traditional way
-            window.location.href = 'service.html'; // Replace with your desired URL
+            event.preventDefault();
+            fetch('https://getform.io/f/pbgxrmva', {
+                method: 'POST',
+                body: new FormData(event.target)
+            }).then((response) => {
+                if (response.ok) {
+                    return response.text();
+                } else {
+                    throw new Error('Network response was not ok.');
+                }
+            }).then((data) => {
+               alert("successfully submitted data");
+                window.location.href = 'asspage3.html';
+            }).catch((error) => {
+                console.error('There has been a problem with your fetch operation:', error);
+            });
         });
     </script>
 </body>
