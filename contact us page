@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 400px;
+            animation: slideInFromZ 1s ease-out;
+        }
+
+        @keyframes slideInFromZ {
+            0% {
+                transform: translateZ(-200%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateZ(0);
+                opacity: 1;
+            }
+        }
+
+        .contact-form h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .name-group {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .name-group input {
+            width: 48%;
+        }
+
+        input[type="email"], 
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .checkbox-group label {
+            font-size: 14px;
+            color: #666666;
+        }
+
+        .contact-button {
+            width: 100%;
+            padding: 15px;
+            background-color: #ff4b4b;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .contact-button:hover {
+            background-color: #e04343;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form action="https://getform.io/f/pbgxrmva" method="POST" enctype="multipart/form-data" class="contact-form" id="contactForm">
+            <h2>Talk to us</h2>
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Work email*" name="e-mail" required>
+            </div>
+            <div class="form-group name-group">
+                <input type="text" id="first-name" name="first-name" placeholder="First name*" name="first name" required>
+                <input type="text" id="last-name" name="last-name" placeholder="Last name*" name="last name" required>
+            </div>
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="agreement" name="agreement" name="agree" required>
+                <label for="agreement">I agree to Fyle's terms and conditions, and provide consent to send me communication.</label>
+            </div>
+            <button type="submit" class="contact-button">Contact Us</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevents the form from submitting in the traditional way
+            window.location.href = 'asspage3.html'; // Replace with your desired URL
+        });
+    </script>
+</body>
+</html>
