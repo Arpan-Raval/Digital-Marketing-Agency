@@ -155,7 +155,7 @@
                     <img src="https://cdn-icons-png.flaticon.com/512/84/84366.png" alt="Web Development Icon" class="service-icon">
                     <h3 class="service-title">WEB DEVELOPMENT</h3>
                     <p class="service-description">Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque vitae ante at elit fringilla ac at purus. Morbi sed lacus nec risus finibus feugiat et fermentum.</p>
-                    <a href="asspage4.html" class="service-button">READ MORE</a>
+                    <a href="product.html" class="service-button">READ MORE</a>
                 </div>
             </div>
             <div class="service-item">
